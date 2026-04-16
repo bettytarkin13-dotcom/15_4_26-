@@ -1,0 +1,21 @@
+CREATE TABLE exam_results(
+    ID INTEGER PRIMARY KEY,
+	EMAIL TEXT NOT NULL UNIQUE,
+	STUDENT_NAME TEXT NOT NULL,
+	GRADE REAL CHECK(GRADE BETWEEN 0 AND 100),
+	STATUS TEXT DEFAULT 'PENDING'
+);
+
+INSERT INTO EXAM_RESULTS (ID,EMAIL,STUDENT_NAME,GRADE,STATUS) VALUES
+(1,'dana@mail.com','Dana',92,'approved'),
+(2,'omer@mail.com','Omer',76,'pending'),
+(3,'noa@mail.com','Noa',85,'approved');
+
+SELECT STUDENT_NAME
+FROM exam_results
+WHERE STATUS = 'approved'
+
+SELECT*
+FROM exam_results
+WHERE STUDENT_NAME like 'd%'
+AND EMAIL LIKE 'd%';
