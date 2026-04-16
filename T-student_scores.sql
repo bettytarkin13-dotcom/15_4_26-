@@ -1,13 +1,15 @@
 CREATE TABLE student_scores (
-    ID INT PRIMARY KEY,
-    NAME TEXT NOT NULL,
-    SCORE REAL NOT NULL
-);
+   ID INTEGER PRIMARY KEY,
+   SCORE REAL, 
+   NAME TEXT,
+   AVATAR BLOB, 
+   NOTE TEXT NOT NULL 
+); 
 
-INSERT INTO student_scores (ID, NAME, SCORE) VALUES
-(1,'Dana',91.5),
-(2,'Omer',76.0),
-(3,'Noa',88.0);
+INSERT INTO student_scores (ID, NAME, SCORE, AVATAR, NOTE) VALUES 
+(1,'Dana',91.5,'X402','EXCELLENT'), 
+(2,'Omer',76.0,'X403','NEEDS PARCTICE'), 
+(3,'Noa',88.0,'X404','GOOD');
 
 SELECT*
 FROM student_scores
