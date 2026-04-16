@@ -1,0 +1,17 @@
+CREATE TABLE app_users(
+    ID INT PRIMARY KEY,
+	NAME TEXT NOT NULL,
+	married BOOLEAN,
+	birth_date DATE,
+	last_login datetime
+);
+
+INSERT INTO app_users (ID,NAME,MARRIED,BIRTH_DATE,LAST_LOGIN) VALUES
+(1,'DANA',TRUE,'2004-06-15','2026-04-10 09:10:00'),
+(2,'OMER',FALSE,'2003-11-02','2026-03-20 18:40:00'),
+(3,'NOA',TRUE,'2005-01-03','2026-04-12 07:55:00');
+
+SELECT*
+FROM app_users
+WHERE married = TRUE
+  AND last_login > '2026-04-01';
